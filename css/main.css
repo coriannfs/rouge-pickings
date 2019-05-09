@@ -41,34 +41,36 @@ p {
 
 /*The widths are in a percentage!*/
 header {
-	height: 110px;
-	border-bottom: 3px solid #77a466;
+  border-bottom: 3px solid #77a466;
 	margin: 0 auto;
+
 }
 
 header h1 {
-	float: left;
 	margin: 0;
-	padding: 38px 0;
+	padding: 16px 0;
+	text-align: center;
+	border-bottom: 3px solid #77a466;
 }
 header h1 span {
 	color: #77a466;
 }
 
 header nav {
-	float: right;
-	padding: 46px 0;
+	padding: 16px 0;
 }
 header nav ul {
 	margin: 0;
 	padding: 0;
+	text-align: center;
 }
 header nav ul li {
 	text-transform: uppercase;
+	list-style: none;
 	font-weight: 700;
 	font-size: 14px;
 	padding: 0 10px;
-	display: inline;
+	margin: 20px;
 }
 header nav ul li a{
 	text-decoration: none;
@@ -110,8 +112,7 @@ header nav ul li a{
 .section-two,
 .section-three {
 	width: 33%;
-	height: auto;
-	float: left;
+	display: block;
 	border-top: 1px solid #eee;
 }
 
@@ -151,7 +152,7 @@ header nav ul li a{
 
 /*The widths are in a percentage!*/
 footer {
-	height: 50px;
+
 	border-top: 3px solid #eee;
 	margin: 0 auto;
 	clear: both;
