@@ -20,6 +20,7 @@ body {
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	flex-flow: row wrap;
 }
 
 h1,
@@ -58,6 +59,7 @@ header {
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	flex-flow: column wrap;
 }
 
 header h1 {
@@ -97,6 +99,7 @@ header nav ul li a{
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	flex-flow: row wrap;
 }
 
 .main-image {
@@ -125,24 +128,10 @@ header nav ul li a{
 .section-two,
 .section-three {
 	width: 100%;
-	display: block;
 	border-top: 1px solid #eee;
 }
 
-.section-one h4 {
-	padding: 10px 0;
-}
 
-/*for desktop ver.*/
-/*.section-two {
-	border-left: 1px solid #eee;
-	border-right: 1px solid #eee;
-}
-
-.section-two h4,
-.section-three h4 {
-	padding: 10px 30px;
-}*/
 
 .menu {
 	list-style: none;
@@ -171,10 +160,73 @@ footer {
 	text-align: center;
 	display: flex;
 	justify-content: center;
+	flex-flow: row wrap;
 }
 footer span {
 	font-family: 'Wisdom Script', cursive;
 	text-transform: lowercase;
 	color: #77a466;
 	font-size: .88em;
+}
+
+/***** BREAK POINTS *****/
+/** Tablet **/
+@media all and (min-width: 768px) {
+	.bottom-section {
+		width: 100%;
+		display: flex;
+		flex-flow: row wrap;
+		justify-content: center;
+	}
+	.section-one {
+		width: 33%;
+		height: 300px;
+	}
+	.section-two {
+		width: 33%;
+		height: 300px;
+		border-left: 1px solid #eee;
+		border-right: 1px solid #eee;
+	}
+	.section-three {
+		width: 33%;
+		height: 300px;
+	}
+	.section-two h4,
+	.section-three h4{
+		padding: 5px 10px 5px 30px;
+	}
+	.section-one h4 {
+		padding: 5px 10px 5px 0;
+	}
+}
+
+/** Desktop **/
+@media all and (min-width:1200px) {
+	header {
+		justify-content: space-between;
+		flex-flow: row wrap;
+		padding-bottom: 10px;
+	}
+	header nav ul {
+		display:flex;
+		justify-content: space-between;
+	}
+	header nav ul li {
+		margin: 5px;
+		padding: 0;
+	}
+	header h1 {
+		width: 30%;
+		border-bottom: none;
+		text-align: left;
+	}
+	header nav {
+		width: 40%;
+	}
+	.section-one, .section-two, .section-three {
+		height: 200px;
+	}
+	}
+
 }
